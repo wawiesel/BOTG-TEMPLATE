@@ -1,6 +1,4 @@
-Loggerhead [WIP]
-================
+BOTG-SkeletonRepo [WIP]
+=======================
 
-.. image:: http://i.imgur.com/YAQaRZx.jpg
-
-CMake/TriBITS-enabled C++/Fortran logging and more using Spdlog
+A skeleton repo to use for examples and creating new repos. Fork me and see!
