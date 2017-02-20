@@ -1,4 +1,7 @@
-BOTG-SkeletonRepo [WIP]
-=======================
+BOTG-Template [WIP]
+===================
 
-A skeleton repo to use for examples and creating new repos. Fork me and see!
+A template repo to use for examples and creating new repos. Fork me and see!
+
+.. image:: http://i.imgur.com/GtBpaIo.jpg
+
