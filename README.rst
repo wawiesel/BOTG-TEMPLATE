@@ -1,7 +1,7 @@
 BOTG-TEMPLATE [WIP]
 ===================
 
-A template repo to use for examples and creating new repos. Fork me and see!
+A template repo for creating new repos that use BootsOnTheGround. Fork me and see!
 
 .. image:: http://i.imgur.com/GtBpaIo.jpg
 
