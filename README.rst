@@ -1,4 +1,4 @@
-BOTG-Template [WIP]
+BOTG-TEMPLATE [WIP]
 ===================
 
 A template repo to use for examples and creating new repos. Fork me and see!
