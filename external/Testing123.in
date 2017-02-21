@@ -1,0 +1,31 @@
+##
+##
+##external/Testing123.in
+##------------------------------------------------------------------------------
+##This file is configured and then treated like its own
+##CMakeLists.txt file to drive the download using only
+##CMake and the awesome ``ExternalProject_Add`` command.
+##
+##.. code-block:: cmake
+##
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8.2)
+PROJECT(download-external-Testing123 NONE)
+
+MESSAGE( STATUS "[Testing123] downloading Testing123...")
+
+INCLUDE(ExternalProject)
+ExternalProject_Add( download-external-Testing123
+  GIT_REPOSITORY
+    https://github.com/wawiesel/Testing123.git
+  GIT_TAG
+    master
+  SOURCE_DIR
+    "${BOTG_EXTERNAL_SOURCE_DIR_Testing123}"
+  CONFIGURE_COMMAND ""
+  BUILD_COMMAND     ""
+  INSTALL_COMMAND   ""
+  TEST_COMMAND      ""
+  UPDATE_COMMAND    ""
+)
+
+MESSAGE( STATUS "[Testing123] done downloading!")
