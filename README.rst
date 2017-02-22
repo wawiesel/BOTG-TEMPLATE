@@ -1,7 +1,7 @@
 BOTG-TEMPLATE 
 =============
 
-fork this to create your own BootsOnTheGround repo
+fork this to create your own BootsOnTheGround-based repo
 
 .. image:: http://i.imgur.com/GtBpaIo.jpg
 
