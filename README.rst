@@ -3,7 +3,7 @@ BOTG-TEMPLATE
 
 fork this to create your own BootsOnTheGround-based repo
 
-.. image:: http://i.imgur.com/GtBpaIo.jpg
+.. image:: https://c1.staticflickr.com/4/3718/33049248211_539e08cbec_b.jpg
 
 .. code:: bash
 
