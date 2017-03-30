@@ -7,4 +7,4 @@
 ##.. code-block:: cmake
 ##
 
-ADD_FORTRAN_TEST( tstDemo.f90 )
+t123AddTest( tstDemo.f90 )

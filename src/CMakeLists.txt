@@ -12,14 +12,14 @@
 #Do this at the beginning of a package.
 TRIBITS_PACKAGE( BOTG_TEMPLATE )
 
-BOTG_UseCxxStandard( 11 )
+botgUseCxxStandard( 11 )
 SET(SOURCES
     TMPL/Demo.cc
-    TMPL/f/c_linkage.cc
+    TMPL/Fortran/c_linkage.cc
 )
 SET(HEADERS
     TMPL/Demo.hh
-    TMPL/f/c_linkage.h
+    TMPL/Fortran/c_linkage.h
 )
 TRIBITS_ADD_LIBRARY( BOTG_TEMPLATE
   SOURCES
@@ -51,14 +51,14 @@ TRIBITS_ADD_TEST_DIRECTORIES( TMPL/test )
 IF(${PROJECT_NAME}_ENABLE_Fortran)
 
     # Enable fortran goodies.
-    BOTG_EnableFortran(
+    botgEnableFortran(
         C_PREPROCESSOR
         UNLIMITED_LINE_LENGTH
     )
 
-    TRIBITS_ADD_LIBRARY( BOTG_TEMPLATE_f
+    TRIBITS_ADD_LIBRARY( BOTG_TEMPLATE_Fortran
       SOURCES
-        TMPL/f/Demo_M.f90
+        TMPL/Fortran/Demo_M.f90
     )
 
     # Fortran modules must be on include path.
@@ -67,9 +67,9 @@ IF(${PROJECT_NAME}_ENABLE_Fortran)
     )
 
     #Link fortran library to C++
-    TARGET_LINK_LIBRARIES( BOTG_TEMPLATE_f BOTG_TEMPLATE )
+    TARGET_LINK_LIBRARIES( BOTG_TEMPLATE_Fortran BOTG_TEMPLATE )
 
-    TRIBITS_ADD_TEST_DIRECTORIES( TMPL/f/test )
+    TRIBITS_ADD_TEST_DIRECTORIES( TMPL/Fortran/test )
 
 ENDIF()
 

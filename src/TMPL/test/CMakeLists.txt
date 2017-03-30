@@ -7,4 +7,4 @@
 ##.. code-block:: cmake
 ##
 
-ADD_CXX_TEST( tstDemo.cc )
+t123AddTest( tstDemo.cc )

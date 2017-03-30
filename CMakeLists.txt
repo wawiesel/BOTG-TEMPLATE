@@ -12,12 +12,12 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.0 FATAL_ERROR)
 INCLUDE( "${CMAKE_SOURCE_DIR}/cmake/BOTG_INCLUDE.cmake" )
 
 # Download external projects.
-BOTG_DownloadExternalProjects(
+botgDownloadExternalProjects(
     external/Testing123.in
 )
 
 # Configure the project.
-BOTG_ConfigureProject( "${CMAKE_SOURCE_DIR}" )
+botgConfigureProject( "${CMAKE_SOURCE_DIR}" )
 TRIBITS_PROJECT_ENABLE_ALL()
 
 # Final print of all the variables for inspection.
@@ -26,5 +26,5 @@ TRIBITS_PROJECT_ENABLE_ALL()
 #                 print all the BootsOnTheGround variables.
 #
 IF( DEFINED MATCH_VARIABLE_REGEX )
-    BOTG_PrintAllVariables("${MATCH_VARIABLE_REGEX}")
+    botgPrintAllVariables("${MATCH_VARIABLE_REGEX}")
 ENDIF()
