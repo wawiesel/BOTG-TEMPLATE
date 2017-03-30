@@ -13,6 +13,10 @@
 TRIBITS_PACKAGE( BOTG_TEMPLATE )
 
 botgUseCxxStandard( 11 )
+botgAddCompilerFlags( CXX ANY Linux
+    "-pthread"
+)
+
 SET(SOURCES
     TMPL/Demo.cc
     TMPL/Fortran/c_linkage.cc
