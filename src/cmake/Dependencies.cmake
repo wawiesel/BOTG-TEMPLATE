@@ -1,6 +1,6 @@
 ##
 ##
-##src/CMakeLists.txt
+##src/cmake/Dependencies.cmake
 ##------------------------------------------------------------------------------
 ##Every TriBITS package must declare its dependencies.
 ##If you are using BootsOnTheGround, then you can add TPLs

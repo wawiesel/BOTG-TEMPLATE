@@ -13,9 +13,7 @@
 TRIBITS_PACKAGE( BOTG_TEMPLATE )
 
 botgUseCxxStandard( 11 )
-botgAddCompilerFlags( CXX ANY Linux
-    "-pthread"
-)
+botgProcessTPLS()
 
 SET(SOURCES
     TMPL/Demo.cc
