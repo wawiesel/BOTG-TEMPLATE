@@ -13,6 +13,7 @@
 TRIBITS_PACKAGE( BOTG_TEMPLATE )
 
 botgUseCxxStandard( 11 )
+botgProcessTPLS()
 
 SET(SOURCES
     TMPL/Demo.cc
