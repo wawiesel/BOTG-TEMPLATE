@@ -9,71 +9,44 @@
 ##.. code-block:: cmake
 ##
 
-#Do this at the beginning of a package.
-TRIBITS_PACKAGE( BOTG_TEMPLATE )
+botgPackage( BOTG_TEMPLATE )
 
 botgUseCxxStandard( 11 )
-botgProcessTPLS()
 
-SET(SOURCES
-    TMPL/Demo.cc
-    TMPL/Fortran/c_linkage.cc
-)
-SET(HEADERS
-    TMPL/Demo.hh
-    TMPL/Fortran/c_linkage.h
-)
-TRIBITS_ADD_LIBRARY( BOTG_TEMPLATE
-  SOURCES
-    ${SOURCES}
-  NOINSTALLHEADERS
-    ${HEADERS}
+botgLibrary( BOTG_TEMPLATE
+    SOURCES
+        TMPL/Demo.cc
+    HEADERS
+        TMPL/Demo.hh
 )
 
-INCLUDE_DIRECTORIES(
-    ${CMAKE_CURRENT_SOURCE_DIR}
-)
-
-INSTALL(
-  FILES
-    ${HEADERS}
-  DESTINATION
-    include/TMPL
-)
-
-#Executable utility
 TRIBITS_ADD_EXECUTABLE( utility
   NOEXEPREFIX
   SOURCES
     TMPL/utility.cc
 )
 
-TRIBITS_ADD_TEST_DIRECTORIES( TMPL/test )
+botgEnableFortran(
+    C_PREPROCESSOR
+    UNLIMITED_LINE_LENGTH
+)
 
-IF(${PROJECT_NAME}_ENABLE_Fortran)
-
-    # Enable fortran goodies.
-    botgEnableFortran(
-        C_PREPROCESSOR
-        UNLIMITED_LINE_LENGTH
-    )
-
-    TRIBITS_ADD_LIBRARY( BOTG_TEMPLATE_Fortran
-      SOURCES
+botgLibrary( BOTG_TEMPLATE_Fortran
+    LANGUAGE Fortran
+    SOURCES
         TMPL/Fortran/Demo_M.f90
-    )
+        TMPL/Fortran/c_linkage.cc
+    HEADERS
+        TMPL/Demo.hh
+        TMPL/Fortran/c_linkage.h
+    LINK_TO
+        BOTG_TEMPLATE
+)
 
-    # Fortran modules must be on include path.
-    INCLUDE_DIRECTORIES(
-        ${CMAKE_CURRENT_BINARY_DIR}
-    )
+botgTestDir( 
+    TMPL/test 
+    TMPL/Fortran/test
+)
 
-    #Link fortran library to C++
-    TARGET_LINK_LIBRARIES( BOTG_TEMPLATE_Fortran BOTG_TEMPLATE )
+botgEnd()
 
-    TRIBITS_ADD_TEST_DIRECTORIES( TMPL/Fortran/test )
-
-ENDIF()
-
-#Do this at the end.
-TRIBITS_PACKAGE_POSTPROCESS()
