@@ -43,8 +43,8 @@ botgLibrary( BOTG_TEMPLATE_Fortran
         BOTG_TEMPLATE
 )
 
-botgTestDir( 
-    TMPL/test 
+botgTestDir(
+    TMPL/test
     TMPL/Fortran/test
 )
 
