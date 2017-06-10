@@ -7,7 +7,7 @@ namespace test
 
 TEST( Demo, Basic )
 {
-    EXPECT_EQ( 1, 1 );
+    EXPECT_EQ( 10, cxx_function(5) );
 }
 
 }//test
