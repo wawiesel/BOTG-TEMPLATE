@@ -1,5 +1,5 @@
 #include "TMPL/Demo.hh"
-#include "t123/TestExe.hh"
+#include "t123/TestFile.hh"
 namespace TMPL
 {
 namespace test
