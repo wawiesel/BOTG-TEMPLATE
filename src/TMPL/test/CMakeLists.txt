@@ -7,4 +7,4 @@
 ##.. code-block:: cmake
 ##
 
-t123AddTest( tstDemo.cc )
+t123TestFile( tstDemo.cc )
